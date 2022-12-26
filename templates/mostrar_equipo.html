@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block contenido %}
+    <div class="display-4 text-center">
+        <span>{{ equipo.id }}</span><br>
+        <span>{{ equipo.nombre }}</span><br>
+        <span>{{ equipo.anio_creacion }}</span><br>
+        {% if equipo.campeon == 1 %}      
+            <img src="{% static 'img/cam.jpg' %}">
+        {% endif %}
+    </div>
+{% endblock %}
